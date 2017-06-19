@@ -20,8 +20,10 @@ app.controller('MainController', function(getComments, postComments){
 
     postComments.postMessage(messageToAdd);
 
-  }//end newMessage
-
+    getComments.getMessage().then(function(data){
+      vm.messages = data;
+    })
+  };//end newMessage
 
 
 
