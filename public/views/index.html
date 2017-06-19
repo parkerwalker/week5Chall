@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <script src="scripts/services/getComments.services.js" charset="utf-8"></script>
+  <script src="scripts/services/postCommets.services.js" charset="utf-8"></script>
+  <title>Week 5 chall</title>
+</head>
+<body ng-app='app'>
+  <h1>Week 5 chall</h1>
+  <div ng-controller='MainController as mc' class="">
+    <div ng-init='mc.loadComments()' class="">
+
+
+      <form ng-submit='mc.loadComments()' class="">
+        <input ng-model='mc.name' type="text" name="" value="" placeholder="Name">
+        <input ng-model='mc.message' type="text" name="" value="" placeholder="Write your message">
+        <button ng-click='mc.newMessage()' type="button" name="button">Submit</button>
+      </form>
+      <button ng-click='mc.loadComments()' type="button" name="button">Update</button>
+
+      <div ng-repeat='x in mc.messages' class="">
+        <h3> Name: {{x.name}}</h3>
+        <h3>message: {{x.message}}</h3>
+        <hr>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>
