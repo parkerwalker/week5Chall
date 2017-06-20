@@ -10,5 +10,5 @@ app.service('postComments', function($http){
       data: messageToAdd
     })
 
-  }
+  };//end postMessage
 });//end service

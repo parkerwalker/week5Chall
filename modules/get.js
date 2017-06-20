@@ -32,9 +32,6 @@ router.post('/post', function(req,res){
   }
   var newData = messageModel(dataToAdd);
   newData.save();
-})
-
-
-
+});
 
 module.exports = router;

@@ -25,8 +25,4 @@ app.controller('MainController', function(getComments, postComments){
     })
   };//end newMessage
 
-
-
-
-
 });//end controller
